@@ -1,0 +1,20 @@
+{
+  "name": "time_to_answer",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "5.13.1",
+    "bootstrap": "4.5.0",
+    "bootstrap-growl-ifightcrime": "^1.1.0",
+    "chart.js": "2.9.3",
+    "fastclick": "1.0.6",
+    "jquery": "3.5.1",
+    "jquery.easing": "^1.4.1",
+    "malihu-custom-scrollbar-plugin": "3.1.3",
+    "nprogress": "0.2.0",
+    "popper.js": "^1.16.1"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "cbravos5 <cnbravos5@gmail.com>",
+  "license": "MIT"
+}
