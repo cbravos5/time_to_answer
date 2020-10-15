@@ -7,6 +7,12 @@
       user:
         one: Usuário
         other: Usuários
+      subject:
+        one: Assunto
+        other: Assuntos
+      question:
+        one: Questão
+        other: Questões
     attributes:
       admin:
         id: Identificador
@@ -19,4 +25,15 @@
         id: Identificador
         email: Email
         created_at: "Criado em"
-        updated_at: "Atualizado em"      
+        updated_at: "Atualizado em"
+      subject:
+        id: Identificador
+        description: Descrição 
+        created_at: "Criado em"
+        updated_at: "Atualizado em"     
+      question:
+        id: Identificador
+        description: Descrição
+        subject: Assunto
+        created_at: "Criado em"
+        updated_at: "Atualizado em"       

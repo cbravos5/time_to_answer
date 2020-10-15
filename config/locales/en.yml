@@ -1,2 +1,28 @@
 en:
-  hello: "Hello world"
+  submit: Submit
+  admin:
+    placeholder_email: "Enter Email"
+    placeholder_password: "Enter Password"
+    placeholder_password_confirmation: "Enter Password Confirmation"
+    notice_update: "Administrator updated"
+    notice_create: "Administrator created"
+    notice_delete: "Administrator deleted"
+    layout: Admins
+    edit: "Editing Admin"
+    new: "Creating Admin"
+  subject:
+    placeholder_subject: "Enter Subject"
+    notice_update: "Subject updated"
+    notice_create: "Subject created"
+    notice_delete: "Subject deleted"
+    layout: Subjects
+    edit: "Editing Subject"
+    new: "Creating Subject"
+  question:
+    placeholder_question: "Enter Question"
+    notice_update: "Question updated"
+    notice_create: "Question created"
+    notice_delete: "Question deleted"
+    layout: Questions
+    edit: "Editing Question"
+    new: "Creating Question"

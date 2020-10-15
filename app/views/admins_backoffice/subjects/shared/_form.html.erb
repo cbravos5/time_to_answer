@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <style>
+        b {color: <%=color%>};
+    </style>
+</head>
+
+<h1><b><%= action_message %></b></h1>
+ <body>
+    <% if @subject.errors.any? %>
+        <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <ul>
+                <% @subject.errors.full_messages.each do |message| %>
+                    <li><a class="alert-link"><%= message %></a></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <%= form_with(model: [ :admins_backoffice, @subject], local: true) do |form| %>
+        <div class="form-group">
+            <b><%= form.label :description %></b>
+            <%= form.text_field :description, class:"form-control", placeholder:"Enter Subject" %>
+        </div>
+        <button type="submit" class="btn btn-primary"><%= t('submit') %></button>
+    <% end %>
+
+</body>
+
+</html>

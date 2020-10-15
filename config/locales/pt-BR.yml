@@ -1,0 +1,28 @@
+'pt-BR':
+  submit: Confirmar
+  admin:
+    placeholder_email: "Insira o Email"
+    placeholder_password: "Insira a Senha"
+    placeholder_password_confirmation: "Insira a Confirmação de Senha"
+    notice_update: "Administrador atualizado"
+    notice_create: "Administrador criado"
+    notice_delete: "Administrador excluído"
+    layout: Admins
+    edit: "Editando Admin"
+    new: "Criando Admin"
+  subject:
+    placeholder_subject: "Insira Assunto da Questão"
+    notice_update: "Assunto atualziado"
+    notice_create: "Assunto criado"
+    notice_delete: "Assunto excluído"
+    layout: Assuntos
+    edit: "Editando Assunto"
+    new: "Criando Assunto"
+  question:
+    placeholder_question: "Insira a Questão"
+    notice_update: "Questão atualizada"
+    notice_create: "Questão criada"
+    notice_delete: "Questão excluída"
+    layout: Questões
+    edit: "Editando Questão"
+    new: "Criando Questão"

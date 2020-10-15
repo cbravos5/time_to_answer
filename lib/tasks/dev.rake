@@ -13,6 +13,7 @@ namespace :dev do
       success_spinner("Getting extra administrators") {%x(rails dev:add_admin_extra)}
       success_spinner("Getting default user") {%x(rails dev:add_user)}
       success_spinner("Getting default subjects...") {%x(rails dev:add_subjects)}
+      success_spinner("Getting default questions...") {%x(rails dev:add_questions)}
     else
       puts "Invalid task during non-dev enviroment"
     end
@@ -54,6 +55,18 @@ namespace :dev do
 
     File.open(file_path, 'r').each do |line|
       Subject.create!(description: line.strip)
+    end
+  end
+
+  desc "Add default questions"
+  task add_questions: :environment do
+    Subject.all.each do |subject|
+      rand(5..10).times do |i|
+        Question.create!(
+          description: "#{Faker::Lorem.paragraph}?",
+          subject: subject
+        )
+      end
     end
   end
 

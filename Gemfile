@@ -46,7 +46,7 @@ gem 'faker'
 
 gem 'kaminari'
 
-gem 'pry-rails', '~> 0.3.9'
+gem 'pry-rails', :group => :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

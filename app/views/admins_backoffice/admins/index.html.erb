@@ -1,4 +1,4 @@
-<h1>Admins</h1>
+<h1><%= Admin.model_name.human(count: @admins.count) %></h1>
 <div class="card shadow mb-4">
     <div class="card-body">
         <div class="table-responsive">
@@ -11,7 +11,10 @@
             <thead>
             <tr role="row">
             <th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 10px;">#</th>
-            <th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 161px;text-align:center;">Name</th>
+            <th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" 
+                aria-label="Name: activate to sort column descending" style="width: 161px;text-align:center;">
+                <%= translate_attr(@admins,:email) %>
+            </th>
             <th style="text-align:center;">
                 <%= link_to new_admins_backoffice_admin_path, class:"btn btn-success btn-circle" do %>
                     <i class="fas fa-plus"></i>

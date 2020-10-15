@@ -11,7 +11,7 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
 
   def update
     if @admin.update(params_admin)
-      redirect_to admins_backoffice_admins_path, notice: "Administrator updated"
+      redirect_to admins_backoffice_admins_path, notice: t('admin.notice_update')
     else
       render :edit
     end
@@ -24,7 +24,7 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
   def create
     @admin = Admin.new(params_admin)
     if @admin.save
-      redirect_to admins_backoffice_admins_path, notice: "Administrator create"
+      redirect_to admins_backoffice_admins_path, notice: t('admin.notice_create')
     else
       render :new
     end
@@ -32,7 +32,7 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
 
   def destroy
     if @admin.destroy
-      redirect_to admins_backoffice_admins_path, notice: "Administrator deleted"
+      redirect_to admins_backoffice_admins_path, notice: t('admin.notice_delete')
     else
       render :index
     end
