@@ -26,3 +26,13 @@ en:
     layout: Questions
     edit: "Editing Question"
     new: "Creating Question"
+  user:
+    placeholder_email: "Enter Email"
+    placeholder_password: "Enter Password"
+    placeholder_password_confirmation: "Enter Password Confirmation"
+    notice_update: "User updated"
+    notice_create: "User created"
+    notice_delete: "User deleted"
+    layout: Users
+    edit: "Editing user"
+    new: "Creating user"

@@ -35,4 +35,10 @@
     <% end %>
 
 <% end %>
-<%= paginate @questions %>
+<%= if user_singned_in? %>
+    <%= paginate @questions %>
+<% else %>
+    <div class="alert alert-warning" role="alert">
+        You must sign In for more questions!!!
+    </div>
+<% end %>

@@ -26,3 +26,13 @@
     layout: Questões
     edit: "Editando Questão"
     new: "Criando Questão"
+  user:
+    placeholder_email: "Insira o Email"
+    placeholder_password: "Insira a Senha"
+    placeholder_password_confirmation: "Insira a Confirmação de Senha"
+    notice_update: "Usuário atualizado"
+    notice_create: "Usuário criado"
+    notice_delete: "Usuário excluído"
+    layout: Usuários
+    edit: "Editando Usuário"
+    new: "Criando Usuário"
