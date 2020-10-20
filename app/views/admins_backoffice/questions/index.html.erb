@@ -33,7 +33,7 @@
                     <td style="width: 10px;text-align:center;"><%= question.id %></td>
                     <td style="text-align:center;" ><%= question.description.truncate(50) %></td>
                     <td style="text-align:center;" ><%= question.subject.description.truncate(30) %></td>
-                    <td style="width: 10px;text-align:center;">
+                    <td style="text-align:center;">
                         <%= link_to edit_admins_backoffice_question_path(question), class:"btn btn-primary btn-circle" do %>
                             <i class="fas fa-edit"></i>
                         <% end %>

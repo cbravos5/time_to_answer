@@ -62,14 +62,28 @@ namespace :dev do
   task add_questions: :environment do
     Subject.all.each do |subject|
       rand(5..10).times do |i|
-        Question.create!(
-          description: "#{Faker::Lorem.paragraph}?",
-          subject: subject
-        )
+        params = create_params(subject)
+        
+        rand(2..5).times do |j|
+          get_answers_attr(params).push({description: Faker::Lorem.sentence, correct: false})
+        end
+
+        choice = rand(get_answers_attr(params).size)
+        get_answers_attr(params)[choice][:correct] = true
+
+        Question.create!(params[:question])
       end
     end
   end
 
+  desc "Reset subjects counter"
+  task reset_subjects_counter: :environment do
+    success_spinner("Reseting subjects counter...") do 
+      Subject.all.each do |subject|
+        Subject.reset_counters(subject.id, :questions)
+      end
+    end
+  end
 
 
 
@@ -82,4 +96,16 @@ namespace :dev do
     spinner.success('(successful)')
   end
 
+  def create_params(subject)
+    { question: {
+          description: "#{Faker::Lorem.paragraph}?",
+          subject: subject, 
+          answers_attributes: []
+      }
+    }
+  end
+
+  def get_answers_attr(params)
+    params[:question][:answers_attributes]
+  end
 end

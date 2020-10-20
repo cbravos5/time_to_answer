@@ -27,5 +27,7 @@ module TimeToAnswer
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     config.generators.system_tests = nil
+    
+    config.web_console.whitelisted_ips = '10.0.2.2'
   end
 end

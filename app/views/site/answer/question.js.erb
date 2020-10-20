@@ -1,0 +1,23 @@
+// Globar vars
+var timer;
+var miliseconds = 5000;
+
+var element = document.getElementById('submit_<%= @answer.question.id %>');
+element.classList.remove('btn-primary');
+element.classList.remove('btn-success');
+element.classList.remove('btn-danger');
+
+
+if (<%= @answer.correct %> ){
+    element.classList.add('btn-success');
+    setTimeout(returnDefault, miliseconds, 'btn-success');
+} else {
+    element.classList.add('btn-danger');
+    setTimeout(returnDefault, 3000, 'btn-danger');
+}
+
+
+function returnDefault(btn_out) {
+    element.classList.remove(btn_out);
+    element.classList.add('btn-primary');
+}
